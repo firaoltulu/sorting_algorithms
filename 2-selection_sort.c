@@ -13,32 +13,32 @@
  */
 void selection_sort(int *array, size_t size)
 {
-    size_t one, two;
-    int three, four, five = 0;
+	size_t one, two;
+	int three, four, five = 0;
 
-    if (array == NULL)
-    {
-        return;
-    }
-    else
-    {
-        for (one = 0; one < size; one++)
-        {
-            three = one;
-            five = 0;
-            for (two = one + 1; two < size; two++)
-            {
-                if (array[three] > array[two])
-                {
-                    three = two;
-                    five += 1;
-                }
-            }
-            four = array[one];
-            array[one] = array[three];
-            array[three] = four;
-            if (five != 0)
-                print_array(array, size);
-        }
-    }
+	if (array == NULL)
+	{
+		return;
+	}
+	else
+	{
+		for (one = 0; one < size; one++)
+		{
+			three = one;
+			five = 0;
+			for (two = one + 1; two < size; two++)
+			{
+				if (array[three] > array[two])
+				{
+					three = two;
+					five += 1;
+				}
+			}
+			four = array[one];
+			array[one] = array[three];
+			array[three] = four;
+			if (five != 0)
+				print_array(array, size);
+		}
+	}
 }
